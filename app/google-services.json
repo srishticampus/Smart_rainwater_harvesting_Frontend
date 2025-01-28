@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "288664390155",
+    "firebase_url": "https://rain-water-evanious-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "rain-water-evanious",
+    "storage_bucket": "rain-water-evanious.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288664390155:android:a22fced37033a73a94950e",
+        "android_client_info": {
+          "package_name": "com.project.irhs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7QGS1DmN5zNmiJEIKQuCXv4XyejJllVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

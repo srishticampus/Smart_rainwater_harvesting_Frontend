@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">IRHS</string>
+    <string name="splash">splash</string>
+    <string name="marklogo">marklogo</string>
+    <string name="rain_sensing_simplified">Rain Sensing Simplified</string>
+    <string name="rain_sensing">RAIN SENSING</string>
+    <string name="onboard">onboard</string>
+    <string name="rainlight">RainLight</string>
+    <string name="rain_status">Rain Status</string>
+    <string name="skip">Skip</string>
+    <string name="rain_sensing_app_version_1_0">Rain Sensing App Version 1.0</string>
+    <string name="next">Next</string>
+    <string name="uploadfiles">uploadfiles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
