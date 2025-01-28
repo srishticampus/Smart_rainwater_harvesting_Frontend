@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".login.ResetActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ep_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/backArrow"
+            app:layout_constraintStart_toEndOf="@id/backArrow"
+            app:layout_constraintTop_toTopOf="@id/backArrow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/resetPassTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/optima_regular"
+        android:text="Reset Password"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/currentPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="15dp"
+        android:autofillHints="@null"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="Current Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:textColor="#828D8A"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/resetPassTv" />
+
+    <ImageView
+        android:id="@+id/hidePassword"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_password_eye"
+        app:layout_constraintBottom_toBottomOf="@id/currentPassword"
+        app:layout_constraintEnd_toEndOf="@id/currentPassword"
+        app:layout_constraintTop_toTopOf="@id/currentPassword" />
+
+
+    <EditText
+        android:id="@+id/newPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="15dp"
+        android:autofillHints="@null"
+        android:background="@drawable/edittext_bg"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="New Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:textColor="#828D8A"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@id/currentPassword" />
+
+    <ImageView
+        android:id="@+id/newPasswordHide"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_password_eye"
+        app:layout_constraintBottom_toBottomOf="@id/newPassword"
+        app:layout_constraintEnd_toEndOf="@id/newPassword"
+        app:layout_constraintTop_toTopOf="@id/newPassword" />
+
+    <TextView
+        android:id="@+id/checkMailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_light"
+        android:text="Check email to find temporary password"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_reset"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkMailTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
