@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/rain_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/rainlight"
+        android:src="@drawable/rain_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rainStatusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/rain_status"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/rain_light"
+        app:layout_constraintStart_toStartOf="@id/rain_light"
+        app:layout_constraintTop_toBottomOf="@id/rain_light" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/seventy"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/seventy"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="center"
+        android:maxLines="5"
+        android:text="Rain status refers to the real-time monitoring of precipitation levels in a given area. It indicates whether it is currently raining, the intensity of the rainfall (light, moderate, or heavy), and the duration."
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rainStatusTv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
