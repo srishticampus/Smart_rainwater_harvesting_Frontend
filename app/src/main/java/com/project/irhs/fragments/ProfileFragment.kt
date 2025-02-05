@@ -1,20 +1,14 @@
 package com.project.irhs.fragments
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
 import com.project.irhs.R
 import com.project.irhs.SharedPreferencesManager
 import com.project.irhs.api.ApiUtilities
@@ -26,30 +20,16 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
-import okhttp3.RequestBody.Companion.asRequestBody
-import java.io.File
-import java.io.FileOutputStream
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfileFragment : Fragment(), View.OnClickListener {
 
     lateinit var binding: FragmentProfileBinding
     private lateinit var sharedPreferencesManager: SharedPreferencesManager
-
     private lateinit var firstNameEt: TextView
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentProfileBinding.inflate(layoutInflater)
         sharedPreferencesManager = SharedPreferencesManager(requireContext())
 
@@ -60,20 +40,21 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
         firstNameEt = binding.nameTV
 
-
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         // Handle back press to quit the app
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                // Exit the app when back is pressed
-                requireActivity().finishAffinity()
-            }
-        })
-
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    // Exit the app when back is pressed
+                    requireActivity().finishAffinity()
+                }
+            })
         // Logout button logic
         binding.logoutBtn.setOnClickListener {
             // Show a confirmation dialog
@@ -97,6 +78,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
             builder.create().show()
         }
     }
+
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.editLyt -> {
@@ -109,19 +91,19 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         }
     }
 
-    fun editProfile() {
+    private fun editProfile() {
         activity?.let {
             startActivity(Intent(context, EditProfile::class.java))
         }
     }
 
-    fun resetPassword() {
+    private fun resetPassword() {
         activity?.let {
             startActivity(Intent(context, ResetActivity::class.java))
         }
     }
 
-    fun viewProfile(userId: String) {
+    private fun viewProfile(userId: String) {
         try {
             CoroutineScope(Dispatchers.IO).launch {
                 val api = ApiUtilities.getInstance()

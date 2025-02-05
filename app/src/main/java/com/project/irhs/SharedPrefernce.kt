@@ -22,8 +22,6 @@ class SharedPreferencesManager(context: Context) {
     }
 
     fun getUserId(): String = sharedPreferences.getString(KEY_USER_ID, "") ?: ""
-    fun getPhoneNumber(): String = sharedPreferences.getString(KEY_PHONE_NUMBER, "") ?: ""
-
     fun saveLoginStatus(isLoggedIn: Boolean) {
         sharedPreferences.edit().putBoolean(LOGIN_STATUS, isLoggedIn).apply()
     }
@@ -38,6 +36,7 @@ class SharedPreferencesManager(context: Context) {
             legacyValue
         }
     }
+
     // Save updated first and last name
     fun saveFirstName(firstName: String) {
         sharedPreferences.edit().putString("first_name", firstName).apply()
@@ -46,7 +45,6 @@ class SharedPreferencesManager(context: Context) {
     fun saveLastName(lastName: String) {
         sharedPreferences.edit().putString("last_name", lastName).apply()
     }
-
 }
 
 

@@ -1,6 +1,7 @@
 package com.project.irhs.splash
 
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -25,17 +26,24 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed(
             {
-                if (sharedPreference.isUserLoggedIn()) {
-                    // If user is already logged in, go directly to the home screen
-                    startActivity(Intent(this, BottomActivity::class.java))
+                val nextActivity = if (sharedPreference.isUserLoggedIn()) {
+                    BottomActivity::class.java
                 } else {
-                    // If user is not logged in, proceed to the onboarding screen
-                    startActivity(Intent(this, OnBoardActivity::class.java))
+                    OnBoardActivity::class.java
                 }
-                overridePendingTransition(0, 0)
-                finish()
+
+                // Create animation options
+                val options = ActivityOptions.makeCustomAnimation(
+                    this,
+                    android.R.anim.fade_in,   // Enter animation
+                    android.R.anim.fade_out   // Exit animation
+                )
+
+                // Start activity with animation
+                startActivity(Intent(this, nextActivity), options.toBundle())
+
+                finish() // Close splash activity
             }, splashTimeout
         )
-
     }
 }
