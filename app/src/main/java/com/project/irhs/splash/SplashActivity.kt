@@ -1,7 +1,10 @@
 package com.project.irhs.splash
 
 import android.annotation.SuppressLint
+<<<<<<< HEAD
 import android.app.ActivityOptions
+=======
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -26,6 +29,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed(
             {
+<<<<<<< HEAD
                 val nextActivity = if (sharedPreference.isUserLoggedIn()) {
                     BottomActivity::class.java
                 } else {
@@ -45,5 +49,19 @@ class SplashActivity : AppCompatActivity() {
                 finish() // Close splash activity
             }, splashTimeout
         )
+=======
+                if (sharedPreference.isUserLoggedIn()) {
+                    // If user is already logged in, go directly to the home screen
+                    startActivity(Intent(this, BottomActivity::class.java))
+                } else {
+                    // If user is not logged in, proceed to the onboarding screen
+                    startActivity(Intent(this, OnBoardActivity::class.java))
+                }
+                overridePendingTransition(0, 0)
+                finish()
+            }, splashTimeout
+        )
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
     }
 }

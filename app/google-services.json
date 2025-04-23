@@ -1,14 +1,25 @@
 {
   "project_info": {
+<<<<<<< HEAD
     "project_number": "773383800363",
     "firebase_url": "https://rain-water-final-c20b0-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "rain-water-final-c20b0",
     "storage_bucket": "rain-water-final-c20b0.firebasestorage.app"
+=======
+    "project_number": "288664390155",
+    "firebase_url": "https://rain-water-evanious-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "rain-water-evanious",
+    "storage_bucket": "rain-water-evanious.firebasestorage.app"
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
         "mobilesdk_app_id": "1:773383800363:android:481b5480be353ec510cc6e",
+=======
+        "mobilesdk_app_id": "1:288664390155:android:a22fced37033a73a94950e",
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         "android_client_info": {
           "package_name": "com.project.irhs"
         }
@@ -16,7 +27,11 @@
       "oauth_client": [],
       "api_key": [
         {
+<<<<<<< HEAD
           "current_key": "AIzaSyAH3zOcfRn3Bg2SBRIYh-MRXE4Qxa5xHu4"
+=======
+          "current_key": "AIzaSyC7QGS1DmN5zNmiJEIKQuCXv4XyejJllVg"
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         }
       ],
       "services": {

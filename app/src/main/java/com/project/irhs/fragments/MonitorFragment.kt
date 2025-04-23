@@ -152,12 +152,20 @@ class MonitorFragment : Fragment() {
                 rainEntries.add(BarEntry(index.toFloat(), data.average_quantity.toFloat()))
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         // Water Usage color - Light Blue (#ADD8E6)
         val usageDataSet = BarDataSet(usageEntries, "Water Usage").apply {
             color = android.graphics.Color.parseColor("#ADD8E6") // Light Blue Color
             valueTextColor = android.graphics.Color.BLACK
             setDrawValues(false) // Disable the value labels
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         // Rainfall color - Light Cyan (#E0FFFF)
         val rainDataSet = BarDataSet(rainEntries, "Rainfall").apply {
             color = android.graphics.Color.parseColor("#E0FFFF") // Light Cyan Color
@@ -178,11 +186,19 @@ class MonitorFragment : Fragment() {
                 }
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         // Setting Y Axis properties to prevent negative values
         barChart.axisLeft.apply {
             axisMinimum = 0f // Ensuring the Y axis starts from 0
             setDrawGridLines(true)
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         // Disabling the right Y Axis as it's usually not needed
         barChart.axisRight.isEnabled = false
 
@@ -201,6 +217,11 @@ class MonitorFragment : Fragment() {
         barChart.invalidate()
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
     private fun getYears(data: List<DataX>): List<String> {
         return data.map { it.year }.distinct()
     }
@@ -212,4 +233,8 @@ class MonitorFragment : Fragment() {
     private fun getMonthNumber(data: List<DataX>, year: String, monthName: String): String {
         return data.firstOrNull { it.year == year && it.month_name == monthName }?.month ?: "1"
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766

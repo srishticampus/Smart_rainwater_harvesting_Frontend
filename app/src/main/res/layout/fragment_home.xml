@@ -62,6 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+<<<<<<< HEAD
             <!-- Sun Image inside Blue Background -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/sunContainer"
@@ -110,6 +111,30 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+            <ImageView
+                android:id="@+id/sunImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/rain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/rainImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@null"
+                android:src="@drawable/lid"
+                app:layout_constraintBottom_toBottomOf="@id/sunImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sunImg"
+                app:layout_constraintTop_toTopOf="@id/sunImg" />
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/middleLyt"
@@ -119,7 +144,11 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@color/blue"
+<<<<<<< HEAD
                 app:layout_constraintTop_toBottomOf="@id/rainContainer">
+=======
+                app:layout_constraintTop_toBottomOf="@id/sunImg">
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
 
                 <TextView
                     android:id="@+id/waterLevelTv"
@@ -316,7 +345,11 @@
                         android:id="@+id/wateringValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+<<<<<<< HEAD
                         android:text="Active"
+=======
+                        android:text="Activie"
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
                         android:textColor="#3C3C3C"
                         android:textSize="14sp" />
 

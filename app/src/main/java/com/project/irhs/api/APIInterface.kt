@@ -9,12 +9,24 @@ import com.project.irhs.login.model.ForgotPasswordResponse
 import com.project.irhs.login.model.LoginResponse
 import com.project.irhs.login.model.ResetPasswordResponse
 import com.project.irhs.signup.model.Registration
+<<<<<<< HEAD
+=======
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
 import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+<<<<<<< HEAD
 import retrofit2.http.POST
+=======
+import retrofit2.http.Multipart
+import retrofit2.http.POST
+import retrofit2.http.Part
+import retrofit2.http.PartMap
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
 import retrofit2.http.Query
 
 interface APIInterface {
@@ -60,6 +72,10 @@ interface APIInterface {
         @FieldMap params: HashMap<String?, String>
     ): Response<ForgotPasswordResponse>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
     @GET("view_analysis.php")
     suspend fun recentAnalysis(
 
@@ -74,10 +90,18 @@ interface APIInterface {
     @FormUrlEncoded
     @POST("monthly_analysis.php")
     suspend fun getAnalysisByMonthYear(
+<<<<<<< HEAD
         @Field("month") month: String,
         @Field("year") year: String
     ): Response<AnalysisByDateYear>
 
+=======
+        @Field("month") month:String,
+        @Field("year") year:String
+    ): Response<AnalysisByDateYear>
+
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
 //    @Multipart
 //    @POST("profile_update.php")
 //    suspend fun updateUserProfile(

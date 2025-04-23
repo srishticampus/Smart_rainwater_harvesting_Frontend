@@ -28,6 +28,10 @@ class OnBoardActivity : AppCompatActivity() {
             finish()
             return
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         binding = ActivityOnBoardBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupOnboardingScreens()
@@ -72,10 +76,20 @@ class OnBoardActivity : AppCompatActivity() {
                 "Plant Watering Status refers to the current state of irrigation or watering activities for plants.",
                 12f
             )
+<<<<<<< HEAD
         )
         viewPager = binding.viewPager
         onboardAdapter = OnboardAdapter((items))
         viewPager.adapter = onboardAdapter
+=======
+
+        )
+
+        viewPager = binding.viewPager
+        onboardAdapter = OnboardAdapter((items))
+        viewPager.adapter = onboardAdapter
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         binding.indicator.setViewPager(viewPager)
 
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
@@ -89,6 +103,10 @@ class OnBoardActivity : AppCompatActivity() {
                 }
             }
         })
+<<<<<<< HEAD
+=======
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
         // Next button click listener
         binding.nextTv.setOnClickListener {
             if (viewPager.currentItem < items.size - 1) {
@@ -99,10 +117,20 @@ class OnBoardActivity : AppCompatActivity() {
                 finishSetup()
             }
         }
+<<<<<<< HEAD
         //skip btn click
         binding.skipTv.setOnClickListener {
             finishSetup()
         }
+=======
+
+        //skip btn click
+
+        binding.skipTv.setOnClickListener {
+            finishSetup()
+        }
+
+>>>>>>> dea137607b8f09b7cdf920506f050450eafa8766
     }
 
     // Handle the finish action when the last page is reached
