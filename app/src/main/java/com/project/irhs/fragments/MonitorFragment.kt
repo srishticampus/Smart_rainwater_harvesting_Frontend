@@ -152,14 +152,12 @@ class MonitorFragment : Fragment() {
                 rainEntries.add(BarEntry(index.toFloat(), data.average_quantity.toFloat()))
             }
         }
-
         // Water Usage color - Light Blue (#ADD8E6)
         val usageDataSet = BarDataSet(usageEntries, "Water Usage").apply {
             color = android.graphics.Color.parseColor("#ADD8E6") // Light Blue Color
             valueTextColor = android.graphics.Color.BLACK
             setDrawValues(false) // Disable the value labels
         }
-
         // Rainfall color - Light Cyan (#E0FFFF)
         val rainDataSet = BarDataSet(rainEntries, "Rainfall").apply {
             color = android.graphics.Color.parseColor("#E0FFFF") // Light Cyan Color
@@ -180,13 +178,11 @@ class MonitorFragment : Fragment() {
                 }
             }
         }
-
         // Setting Y Axis properties to prevent negative values
         barChart.axisLeft.apply {
             axisMinimum = 0f // Ensuring the Y axis starts from 0
             setDrawGridLines(true)
         }
-
         // Disabling the right Y Axis as it's usually not needed
         barChart.axisRight.isEnabled = false
 
@@ -204,8 +200,6 @@ class MonitorFragment : Fragment() {
         // Refresh the chart
         barChart.invalidate()
     }
-
-
 
     private fun getYears(data: List<DataX>): List<String> {
         return data.map { it.year }.distinct()

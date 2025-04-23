@@ -62,28 +62,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/sunImg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <!-- Sun Image inside Blue Background -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sunContainer"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:contentDescription="@null"
-                android:src="@drawable/rain"
+                android:background="@drawable/blue_bg"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/rainImg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/sunImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sunshine"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Rain/Lid Image inside Blue Background -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rainContainer"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_marginStart="20dp"
-                android:contentDescription="@null"
-                android:src="@drawable/lid"
-                app:layout_constraintBottom_toBottomOf="@id/sunImg"
+                android:background="@drawable/blue_bg"
+                app:layout_constraintBottom_toBottomOf="@id/sunContainer"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/sunImg"
-                app:layout_constraintTop_toTopOf="@id/sunImg" />
+                app:layout_constraintStart_toEndOf="@id/sunContainer"
+                app:layout_constraintTop_toTopOf="@id/sunContainer">
+
+                <ImageView
+                    android:id="@+id/lidImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/closelid"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/middleLyt"
@@ -93,7 +119,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@color/blue"
-                app:layout_constraintTop_toBottomOf="@id/sunImg">
+                app:layout_constraintTop_toBottomOf="@id/rainContainer">
 
                 <TextView
                     android:id="@+id/waterLevelTv"
@@ -290,7 +316,7 @@
                         android:id="@+id/wateringValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Activie"
+                        android:text="Active"
                         android:textColor="#3C3C3C"
                         android:textSize="14sp" />
 
